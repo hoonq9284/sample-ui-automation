@@ -1,4 +1,4 @@
-# AutomationTest
+# Repository 소개
 behave를 사용한 자동화 스크립트를 관리하는 레포지토리 입니다.
 
 # Use Tool
