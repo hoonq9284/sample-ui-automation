@@ -12,6 +12,14 @@
 - Design Pattern
   - Page Object Model
 
+# 환경 셋업
+- selenium 을 설치한다.
+  - window os : pip install selenium
+  - mac os : pip3 install selenium
+- behave 를 설치한다.
+  - window os : pip install behave
+  - mac os : pip3 install behave
+    
 # 실행 구조 및 방법
 - 커맨드라인에서 아래 명령어를 통해 실행할 수 있습니다.
   - behave features/{추가 하위 디렉토리.feature}
