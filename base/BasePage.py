@@ -29,12 +29,25 @@ class BasePage:
         self.driver.implicitly_wait(waitTime)
         try:
             element = self.driver.find_element(by=By.XPATH, value=locator)
-            element.is_displayed()
             self.highlight(element, 0.3, "#FF0000", 3)
+            element.is_displayed()
             return True
         except Exception as e:
             assert False
             return False
             print(e)
+
+    def click_element(self, locator):
+        self.driver.implicitly_wait(waitTime)
+        try:
+            element = self.driver.find_element(by=By.XPATH, value=locator)
+            self.highlight(element, 0.3, "#FF0000", 3)
+            element.click()
+            return True
+        except Exception as e:
+            assert False
+            return False
+            print(e)
+            
 
         

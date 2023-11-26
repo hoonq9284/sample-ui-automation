@@ -27,3 +27,11 @@ def step_impl(context):
 @then('"회원가입" 링크 텍스트가 표시된다.')
 def step_impl(context):
     context.mp.check_register_text()
+
+@when('로그인 버튼을 클릭한다.')
+def step_impl(context):
+    context.mp.click_login_button()
+
+@then('로그인 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_login_page_logo()
