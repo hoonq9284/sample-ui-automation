@@ -49,5 +49,14 @@ class BasePage:
             return False
             print(e)
             
-
-        
+    def input_element(self, locator, text):
+        self.driver.implicitly_wait(waitTime)
+        try:
+            element = self.driver.find_element(by=By.XPATH, value=locator)
+            self.highlight(element, 0.3, "#FF0000", 3)
+            element.send_keys(text)
+            return True
+        except Exception as e:
+            assert False
+            return False
+            print(e)

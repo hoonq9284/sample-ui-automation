@@ -2,6 +2,7 @@ from behave import *
 from base.BasePage import BasePage
 from base.CommonFunction import CommonFunction
 from pages.MainPage import MainPage
+from pages.LoginPage import LoginPage
 import config.config as config
 
 from selenium import webdriver
@@ -21,6 +22,7 @@ def step_impl(context):
 def step_impl(context):
     context.bs = BasePage(context.driver)
     context.mp = MainPage(context.driver)
+    context.lp = LoginPage(context.driver)
 
 @given('창을 최대화한다.')
 def step_impl(context):
