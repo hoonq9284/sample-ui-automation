@@ -26,3 +26,9 @@ class MainPage(BasePage):
 
     def check_register_text(self):
         BasePage.is_displayed(self, pe.login_register)
+
+    def click_login_button(self):
+        BasePage.click_element(self, pe.login_button)
+
+    def check_login_page_logo(self):
+        BasePage.is_displayed(self, pe.login_page_logo)
