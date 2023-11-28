@@ -13,6 +13,16 @@ class BasePage:
     def maximize_window(self):
         self.driver.maximize_window()
 
+    # 모든 창 핸들을 가져오고, 현재 활성화 된 핸들을 제외한 창으로 이동
+    def switch_to_window(self):
+        self.driver.implicitly_wait(waitTime)
+        current_window_handle = self.driver.current_window_handle
+        window_handles = self.driver.window_handles
+        for handle in window_handles:
+            if handle != current_window_handle:
+                self.driver.switch_to.window(handle)
+                break
+            
     def highlight(self, element, effect_time, color, border):
         driver = element._parent
 
