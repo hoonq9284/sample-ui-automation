@@ -6,6 +6,16 @@ login_button = '//div[@id="account"]/div/a'
 login_find_id = '//a[contains(text(), "아이디 찾기")]'
 login_find_password = '//a[contains(text(), "비밀번호 찾기")]'
 login_register = '//a[contains(text(), "회원가입")]'
+service_icon_type_cafe = '//span[@class="service_icon type_cafe"]'
+service_icon_type_blog = '//span[@class="service_icon type_blog"]'
+service_icon_type_shopping = '//span[@class="service_icon type_shopping"]'
+service_icon_type_news = '//span[@class="service_icon type_news"]'
+service_icon_type_stock = '//span[@class="service_icon type_stock"]'
+service_icon_type_real = '//span[@class="service_icon type_real"]'
+service_icon_type_map = '//span[@class="service_icon type_map"]'
+service_icon_type_webtoon = '//span[@class="service_icon type_webtoon"]'
+cafe_main_logo = '//h1[@class="logo"]'
+
 
 # LoginPage Elements
 login_page_logo = '//a[@class="logo"]'

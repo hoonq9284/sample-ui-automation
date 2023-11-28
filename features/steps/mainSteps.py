@@ -35,3 +35,11 @@ def step_impl(context):
 @then('로그인 페이지로 이동한다.')
 def step_impl(context):
     context.mp.check_login_page_logo()
+
+@when('네이버 카페 메뉴를 클릭한다.')
+def step_impl(context):
+    context.mp.click_cafe_icon()
+
+@then('네이버 카페 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_cafe_logo()

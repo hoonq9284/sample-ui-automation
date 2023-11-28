@@ -32,3 +32,9 @@ class MainPage(BasePage):
 
     def check_login_page_logo(self):
         BasePage.is_displayed(self, pe.login_page_logo)
+
+    def click_cafe_icon(self):
+        BasePage.click_element(self, pe.service_icon_type_cafe)
+        
+    def check_cafe_logo(self):
+        BasePage.is_displayed(self, pe.cafe_main_logo)
