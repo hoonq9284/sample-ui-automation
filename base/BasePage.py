@@ -67,3 +67,12 @@ class BasePage:
         except Exception as e:
             print(e)
             return False
+
+    def assert_text(expected, result):
+        """
+        result 와 expected 가 같은지 비교
+        :param expected: 예상결과
+        :param result:  실제값
+        :return:
+        """
+        assert result == expected, "예상 텍스트(Expected) : " + expected + "\n 실제 텍스트(result) : " + result

@@ -39,3 +39,68 @@ class MainPage(BasePage):
         
     def check_cafe_logo(self):
         BasePage.is_displayed(self, pe.cafe_main_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.cafe_title)
+
+    def click_blog_icon(self):
+        BasePage.click_element(self, pe.service_icon_type_blog)
+        BasePage.switch_to_window(self)
+
+    def check_blog_logo(self):
+        BasePage.is_displayed(self, pe.blog_main_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.blog_title)
+
+    def click_shopping_icon(self):
+        BasePage.click_element(self, pe.service_icon_type_shopping)
+        BasePage.switch_to_window(self)
+
+    def check_shopping_logo(self):
+        BasePage.is_displayed(self, pe.shopping_main_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.shopping_title)
+
+    def click_news_icon(self):
+        BasePage.click_element(self, pe.service_icon_type_news)
+        BasePage.switch_to_window(self)
+
+    def check_news_logo(self):
+        BasePage.is_displayed(self, pe.news_main_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.news_title)
+
+    def click_stock_icon(self):
+        BasePage.click_element(self, pe.service_icon_type_stock)
+        BasePage.switch_to_window(self)
+
+    def check_stock_logo(self):
+        BasePage.is_displayed(self, pe.stock_main_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.stock_title)
+
+    def click_real_icon(self):
+        BasePage.click_element(self, pe.service_icon_type_real)
+        BasePage.switch_to_window(self)
+
+    def check_real_logo(self):
+        BasePage.is_displayed(self, pe.real_main_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.real_title)
+
+    def click_map_icon(self):
+        BasePage.click_element(self, pe.service_icon_type_map)
+        BasePage.switch_to_window(self)
+
+    def check_map_logo(self):
+        BasePage.is_displayed(self, pe.map_main_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.map_title)
+
+    def click_webtoon_icon(self):
+        BasePage.click_element(self, pe.service_icon_type_webtoon)
+        BasePage.switch_to_window(self)
+
+    def check_webtoon_logo(self):
+        BasePage.is_displayed(self, pe.webtoon_main_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.webtoon_title)
