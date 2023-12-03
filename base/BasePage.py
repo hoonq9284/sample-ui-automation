@@ -75,4 +75,4 @@ class BasePage:
         :param result:  실제값
         :return:
         """
-        assert result == expected, "예상(Expected) : " + expected + "\n 실제(result) : " + result
+        assert result == expected, "예상 텍스트(Expected) : " + expected + "\n 실제 텍스트(result) : " + result
