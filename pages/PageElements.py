@@ -15,7 +15,13 @@ service_icon_type_real = '//span[@class="service_icon type_real"]'
 service_icon_type_map = '//span[@class="service_icon type_map"]'
 service_icon_type_webtoon = '//span[@class="service_icon type_webtoon"]'
 cafe_main_logo = '//h1[@class="logo"]'
-
+blog_main_logo = '//h1[@class="logo_naver_blog"]'
+shopping_main_logo = '//h1[@class="_gnbLogo_title_1xWf-"]'
+news_main_logo = '//div[@class="Ngnb_left"]'
+stock_main_logo = '//div[@class="logo_area"]'
+real_main_logo = '//div[@class="logo_area NE=a:STA"]'
+map_main_logo = '//h1[@class="logo_box"]'
+webtoon_main_logo = '//h1[@class="BrandBar__logo_area--Y_7dM"]'
 
 # LoginPage Elements
 login_page_logo = '//a[@class="logo"]'

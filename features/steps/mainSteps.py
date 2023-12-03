@@ -43,3 +43,59 @@ def step_impl(context):
 @then('네이버 카페 페이지로 이동한다.')
 def step_impl(context):
     context.mp.check_cafe_logo()
+
+@when('네이버 블로그 메뉴를 클릭한다.')
+def step_impl(context):
+    context.mp.click_blog_icon()
+
+@then('네이버 블로그 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_blog_logo()
+
+@when('네이버 쇼핑 메뉴를 클릭한다.')
+def step_impl(context):
+    context.mp.click_shopping_icon()
+
+@then('네이버 쇼핑 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_shopping_logo()
+
+@when('네이버 뉴스 메뉴를 클릭한다.')
+def step_impl(context):
+    context.mp.click_news_icon()
+
+@then('네이버 뉴스 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_news_logo()
+
+@when('네이버 증권 메뉴를 클릭한다.')
+def step_impl(context):
+    context.mp.click_stock_icon()
+
+@then('네이버 증권 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_stock_logo()
+
+@when('네이버 부동산 메뉴를 클릭한다.')
+def step_impl(context):
+    context.mp.click_real_icon()
+
+@then('네이버 부동산 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_real_logo()
+
+@when('네이버 지도 메뉴를 클릭한다.')
+def step_impl(context):
+    context.mp.click_map_icon()
+
+@then('네이버 지도 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_map_logo()
+
+@when('네이버 웹툰 메뉴를 클릭한다.')
+def step_impl(context):
+    context.mp.click_webtoon_icon()
+
+@then('네이버 웹툰 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_webtoon_logo()
