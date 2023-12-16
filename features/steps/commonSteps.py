@@ -13,7 +13,9 @@ from selenium.webdriver.chrome.service import Service
 def step_impl(context):
     if not hasattr(context, 'driver'):
         options = Options()
-        service = Service()
+        # ChromeDriver의 경로를 직접 지정합니다.
+        service = Service('./config/chromedriver')
+        # Service 객체를 사용하여 ChromeDriver의 경로를 전달합니다.
         context.driver = webdriver.Chrome(service=service, options=options)
         context.driver.get(config.BASE_URL)
         context.driver.implicitly_wait(5)
