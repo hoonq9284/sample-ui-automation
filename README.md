@@ -17,8 +17,8 @@
 
 # 환경 셋업
 - selenium 을 설치한다.
-  - window os : pip install selenium
-  - mac os : pip3 install selenium
+  - window os : ```pip install selenium```
+  - mac os : ```pip3 install selenium```
 - behave 를 설치한다.
   - window os : pip install behave
   - mac os : pip3 install behave
