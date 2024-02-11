@@ -35,7 +35,7 @@ class MainPage(BasePage):
 
     def click_cafe_icon(self):
         BasePage.click_element(self, pe.service_icon_type_cafe)
-        BasePage.switch_to_window(self)
+        BasePage.switch_to_window(self, 1)
         
     def check_cafe_logo(self):
         BasePage.is_displayed(self, pe.cafe_main_logo)
@@ -44,7 +44,7 @@ class MainPage(BasePage):
 
     def click_blog_icon(self):
         BasePage.click_element(self, pe.service_icon_type_blog)
-        BasePage.switch_to_window(self)
+        BasePage.switch_to_window(self, 1)
 
     def check_blog_logo(self):
         BasePage.is_displayed(self, pe.blog_main_logo)
@@ -53,7 +53,7 @@ class MainPage(BasePage):
 
     def click_shopping_icon(self):
         BasePage.click_element(self, pe.service_icon_type_shopping)
-        BasePage.switch_to_window(self)
+        BasePage.switch_to_window(self, 1)
 
     def check_shopping_logo(self):
         BasePage.is_displayed(self, pe.shopping_main_logo)
@@ -62,7 +62,7 @@ class MainPage(BasePage):
 
     def click_news_icon(self):
         BasePage.click_element(self, pe.service_icon_type_news)
-        BasePage.switch_to_window(self)
+        BasePage.switch_to_window(self, 1)
 
     def check_news_logo(self):
         BasePage.is_displayed(self, pe.news_main_logo)
@@ -71,7 +71,7 @@ class MainPage(BasePage):
 
     def click_stock_icon(self):
         BasePage.click_element(self, pe.service_icon_type_stock)
-        BasePage.switch_to_window(self)
+        BasePage.switch_to_window(self, 1)
 
     def check_stock_logo(self):
         BasePage.is_displayed(self, pe.stock_main_logo)
@@ -80,7 +80,7 @@ class MainPage(BasePage):
 
     def click_real_icon(self):
         BasePage.click_element(self, pe.service_icon_type_real)
-        BasePage.switch_to_window(self)
+        BasePage.switch_to_window(self, 1)
 
     def check_real_logo(self):
         BasePage.is_displayed(self, pe.real_main_logo)
@@ -89,7 +89,7 @@ class MainPage(BasePage):
 
     def click_map_icon(self):
         BasePage.click_element(self, pe.service_icon_type_map)
-        BasePage.switch_to_window(self)
+        BasePage.switch_to_window(self, 1)
 
     def check_map_logo(self):
         BasePage.is_displayed(self, pe.map_main_logo)
@@ -98,7 +98,7 @@ class MainPage(BasePage):
 
     def click_webtoon_icon(self):
         BasePage.click_element(self, pe.service_icon_type_webtoon)
-        BasePage.switch_to_window(self)
+        BasePage.switch_to_window(self, 1)
 
     def check_webtoon_logo(self):
         BasePage.is_displayed(self, pe.webtoon_main_logo)
