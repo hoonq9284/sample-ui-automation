@@ -1,6 +1,5 @@
 from behave import *
 from base.BasePage import BasePage
-from base.CommonFunction import CommonFunction
 from pages.MainPage import MainPage
 from pages.LoginPage import LoginPage
 import config.config as config
@@ -13,9 +12,7 @@ from selenium.webdriver.chrome.service import Service
 def step_impl(context):
     if not hasattr(context, 'driver'):
         options = Options()
-        # ChromeDriver의 경로를 직접 지정합니다.
         service = Service()
-        # Service 객체를 사용하여 ChromeDriver의 경로를 전달합니다.
         context.driver = webdriver.Chrome(service=service, options=options)
         context.driver.get(config.BASE_URL)
         context.driver.implicitly_wait(5)
