@@ -1,0 +1,4 @@
+allure-behave==2.13.2
+behave==1.2.6
+selenium==4.17.2
+webdriver-manager==4.0.1
