@@ -37,6 +37,3 @@ id_input_field = '//input[@id="id"]'
 password_input_field = '//input[@id="pw"]'
 login_page_button = '//button[@id="log.login"]'
 error_message = '//div[@class="error_message"]'
-
-
-# test
