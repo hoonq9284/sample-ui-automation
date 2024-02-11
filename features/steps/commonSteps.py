@@ -14,7 +14,7 @@ def step_impl(context):
     if not hasattr(context, 'driver'):
         options = Options()
         # ChromeDriver의 경로를 직접 지정합니다.
-        service = Service('./config/chromedriver')
+        service = Service()
         # Service 객체를 사용하여 ChromeDriver의 경로를 전달합니다.
         context.driver = webdriver.Chrome(service=service, options=options)
         context.driver.get(config.BASE_URL)
