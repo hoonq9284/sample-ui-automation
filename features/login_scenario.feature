@@ -4,8 +4,8 @@ Feature: LoginPage
 Background: 초기화
     Given Chrome Browser로 NAVER URL에 접속한다.
     And 테스트 수행에 필요한 초기화를 한다.
-    And 창을 최대화한다.
 
+@login-test-1
 Scenario Outline: 유효하지 않은 계정으로 로그인 시도하기
     When 로그인 버튼을 클릭한다.
     And "<id>" 및 "<password>" 입력한다.
