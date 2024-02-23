@@ -132,3 +132,14 @@ class MainPage(BasePage):
         title = self.driver.title
         BasePage.assert_text(title, pe.webtoon_title)
         cl.allure_logs("웹툰 로고 표시 - 웹툰 페이지 접근 확인")
+
+    def click_weather_link_text(self):
+        BasePage.click_element(self, pe.weather_link_text)
+        BasePage.switch_to_window(self, 1)
+        cl.allure_logs("날씨 링크 텍스트 클릭")
+
+    def check_weather_logo(self):
+        BasePage.is_displayed(self, pe.weather_logo)
+        title = self.driver.title
+        BasePage.assert_text(title, pe.weather_title)
+        cl.allure_logs("날씨 페이지 이동")

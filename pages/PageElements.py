@@ -30,6 +30,7 @@ map_main_logo = '//h1[@class="logo_box"]'
 map_title = '네이버 지도'
 webtoon_main_logo = '//h1[@class="BrandBar__logo_area--Y_7dM"]'
 webtoon_title = '네이버 웹툰'
+weather_link_text = '//a[@href="https://weather.naver.com/" and text()="날씨"]'
 
 # LoginPage Elements
 login_page_logo = '//a[@class="logo"]'
@@ -37,3 +38,12 @@ id_input_field = '//input[@id="id"]'
 password_input_field = '//input[@id="pw"]'
 login_page_button = '//button[@id="log.login"]'
 error_message = '//div[@class="error_message"]'
+
+# WeatherPage Elements
+weather_title = '네이버 날씨'
+weather_logo = '//h1[@class="logo_area"]'
+weather_home_tap = '//a[contains(@href, "/today/") and contains(text(), "홈")]'
+weather_compare_tap = '//a[contains(@href, "/compare/") and contains(text(), "예보비교")]'
+weather_air_tap = '//a[contains(@href, "/air/") and text() = "미세먼지"]'
+weather_map_tap = '//a[contains(@href, "/map/") and contains(text(), "지도")]'
+

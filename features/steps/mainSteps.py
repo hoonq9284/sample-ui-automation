@@ -124,3 +124,13 @@ def step_impl(context):
 @then('네이버 웹툰 페이지로 이동한다.')
 def step_impl(context):
     context.mp.check_webtoon_logo()
+
+
+@when('네이버 날씨 링크 텍스트를 클릭한다.')
+def step_impl(context):
+    context.mp.click_weather_link_text()
+
+
+@then('네이버 날씨 페이지로 이동한다.')
+def step_impl(context):
+    context.mp.check_weather_logo()
