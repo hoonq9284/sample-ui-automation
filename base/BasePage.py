@@ -167,7 +167,7 @@ class BasePage:
         try:
             element = self.driver.find_element(by=By.XPATH, value=locator)
             element.send_keys(text)
-            self.highlight(element, 0.1, "#FF0000", 3)
+            self.highlight(element, 0.1, "#FF0000", 5)
             return True
         except NoSuchElementException as e:
             self.write_log(locator, f" NoSuchElementException 발생 : 지정한 XPATH '{locator}'에 해당하는 엘리먼트를 DOM에서 찾을 수 없습니다. 상세 정보 - {e}")
@@ -179,6 +179,29 @@ class BasePage:
             self.write_log(locator, f" ElementNotInteractableException 발생 : 지정한 XPATH '{locator}'에 해당하는 엘리먼트는 현재 상호작용할 수 없는 상태입니다. 상세 정보 - {e}")
             assert False
 
+    def get_element_text(self, locator):
+        """
+        locator 의 텍스트를 문자열로 크롤링하는 함수.
+        :param locator:
+        :return:
+        """
+        self.web_driver_wait(locator)
+        try:
+            element = self.driver.find_element(by=By.XPATH, value=locator)
+            text = element.text
+            # self.highlight(element, 0.1, "#FF0000", 5)
+            return text
+        except NoSuchElementException as e:
+            self.write_log(locator, f" NoSuchElementException 발생 : 지정한 XPATH '{locator}'에 해당하는 엘리먼트를 DOM에서 찾을 수 없습니다. 상세 정보 - {e}")
+            assert False
+        except StaleElementReferenceException as e:
+            self.write_log(locator, f" StaleElementReferenceException 발생 : 지정한 XPATH '{locator}'에 해당하는 엘리먼트와의 참조가 더 이상 유효하지 않습니다. 상세 정보 - {e}")
+            assert False
+        except ElementNotInteractableException as e:
+            self.write_log(locator, f" ElementNotInteractableException 발생 : 지정한 XPATH '{locator}'에 해당하는 엘리먼트는 현재 상호작용할 수 없는 상태입니다. 상세 정보 - {e}")
+            assert False
+
+    @staticmethod
     def assert_text(expected, result):
         """
         인자로 받은 result 와 expected 가 같은지 비교
