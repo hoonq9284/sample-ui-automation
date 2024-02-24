@@ -2,6 +2,7 @@ import logging
 import os
 import allure
 
+
 def custom_logger(name):
     """
     Test_log.log 파일을 reports 디렉토리 하위에 생성하고, 로그 기록을 지원하는 함수

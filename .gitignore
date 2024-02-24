@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 allure-report/
 reports/
+test_result.json
