@@ -19,17 +19,34 @@ browser_type = ["Chrome", "Firefox", "Edge", "Safari"]
 def step_impl(context):
     try:
         if not hasattr(context, 'driver'):
-            options = Options()
-            options.add_argument("--start-maximized")
-            # options.add_argument("--headless")
-            service = Service()
-            context.driver = webdriver.Chrome(service=service, options=options)
-            context.driver.get(config.BASE_URL)
-            context.driver.implicitly_wait(5)
+            if config.REMOTE_RUN is True:
+                remote_run_browser(context)
+            else:
+                local_run_browser(context)
+
+        context.driver.get(config.BASE_URL)
+        context.driver.implicitly_wait(5)
     except WebDriverException:
         print("WebDriverException 예외 발생 : webdriver를 초기화하지 못했습니다.")
     except AttributeError as e:
         print(f"속성 오류 발생 : {e}. 'driver' 속성이 정의되지 않았습니다.")
+
+
+def local_run_browser(context):
+    options = Options()
+    options.add_argument("--start-maximized")
+    service = Service()
+    context.driver = webdriver.Chrome(service=service, options=options)
+
+
+def remote_run_browser(context):
+    options = Options()
+    options.set_capability("browserName", "chrome")
+    options.add_argument("--start-maximized")
+    try:
+        context.driver = webdriver.Remote(command_executor=config.SELENIUM_GRID_URL, options=options)
+    except Exception as error:
+        print(f"{error} 에러 발생")
 
 
 @given('테스트 환경을 초기화한다.')
