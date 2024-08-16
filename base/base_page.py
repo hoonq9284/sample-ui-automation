@@ -1,7 +1,7 @@
 import os
 import time
 import allure
-import utilities.CustomLogger as log
+import utilities.custom_logger as log
 import config.config as config
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait

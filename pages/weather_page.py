@@ -1,6 +1,6 @@
-from base.BasePage import BasePage
-import pages.PageElements as pe
-import utilities.CustomLogger as cl
+import pages.page_elements as pe
+import utilities.custom_logger as cl
+from base.base_page import BasePage
 
 
 class WeatherPage(BasePage):

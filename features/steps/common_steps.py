@@ -1,8 +1,8 @@
 from behave import *
-from base.BasePage import BasePage
-from pages.MainPage import MainPage
-from pages.LoginPage import LoginPage
-from pages.WeatherPage import WeatherPage
+from base.base_page import BasePage
+from pages.main_page import MainPage
+from pages.login_page import LoginPage
+from pages.weather_page import WeatherPage
 import config.config as config
 
 from selenium import webdriver
